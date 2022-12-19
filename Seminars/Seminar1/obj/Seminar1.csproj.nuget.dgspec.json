@@ -10,11 +10,11 @@
         "projectUniqueName": "C:\\Seminar\\Seminars\\Seminar1\\Seminar1.csproj",
         "projectName": "Seminar1",
         "projectPath": "C:\\Seminar\\Seminars\\Seminar1\\Seminar1.csproj",
-        "packagesPath": "C:\\Users\\sa\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\User1\\.nuget\\packages\\",
         "outputPath": "C:\\Seminar\\Seminars\\Seminar1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User1\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

@@ -26,15 +26,15 @@
 //}
 Console.Clear();
 
- Console.WriteLine("Введи число");
- int x = Convert.ToInt32( Console.ReadLine());
- int i=-x;
- while (i<x+1)
-{
-Console.Write($" { i } ");
-Console.WriteLine("");
-    i=i+1;
-}
+//  Console.WriteLine("Введи число");
+//  int x = Convert.ToInt32( Console.ReadLine());
+//  int i=-x;
+//  while (i<x+1)
+// {
+// Console.Write($" { i } ");
+// Console.WriteLine("");
+//     i=i+1;
+// }
 
 //  Console.WriteLine("Введи число");
 //  int q = Convert.ToInt32( Console.ReadLine());
@@ -42,4 +42,24 @@ Console.WriteLine("");
 //  Console.WriteLine($"{y}");
 //  //int z=q-y
 // //  Console.WriteLine($"{z}");
+
+
+string ThirdDigit(string num)
+{
+    if (num.Length < 3)
+    {
+      return "Третьей цифры нет";
+    }
+    else
+     {
+        return "Третья цифра = " + num[2];
+      //  Console.WriteLine($"Третья цифра ={num[2]}");
+     }  
+
+}
+Console.WriteLine("Введи число");
+string q = Console.ReadLine();
+string result=ThirdDigit(q);
+Console.WriteLine(result);
+
 
