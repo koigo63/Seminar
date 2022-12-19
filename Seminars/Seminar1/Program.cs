@@ -44,22 +44,4 @@ Console.Clear();
 // //  Console.WriteLine($"{z}");
 
 
-string ThirdDigit(string num)
-{
-    if (num.Length < 3)
-    {
-      return "Третьей цифры нет";
-    }
-    else
-     {
-        return "Третья цифра = " + num[2];
-      //  Console.WriteLine($"Третья цифра ={num[2]}");
-     }  
-
-}
-Console.WriteLine("Введи число");
-string q = Console.ReadLine();
-string result=ThirdDigit(q);
-Console.WriteLine(result);
-
 
