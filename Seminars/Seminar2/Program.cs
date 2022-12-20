@@ -45,21 +45,23 @@
 // int b = Convert.ToInt32( Console.ReadLine());
 //  Kratnoe(a,b);
 
-bool Kratnost(int num)
-{
-    int ost = num % 7 + num % 23;
-    if (ost == 0)
-    {
-        return true;
-    }
-    else
-        return false;
+// bool Kratnost(int num)
+// {
+//     int ost = num % 7 + num % 23;
+//     if (ost == 0)
+//     {
+//         return true;
+//     }
+//     else
+//         return false;
 
-}
-Console.WriteLine("Введите число");
-int a = Convert.ToInt32(Console.ReadLine());
-bool result = Kratnost(a);
-Console.WriteLine(result);
+// }
+// Console.WriteLine("Введите число");
+// int a = Convert.ToInt32(Console.ReadLine());
+// bool result = Kratnost(a);
+// Console.WriteLine(result);
+
+
 
 
 
