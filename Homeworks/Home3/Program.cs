@@ -39,33 +39,33 @@
 // Второй вариант Задачи 19
 
 
-void Polindrom(int num)
-{
-    if (num < 10000 || num > 99999)
-    {
-        Console.WriteLine("Неправильно введено число");
-    }
-    else
-    {
-        int num3 = num / 1000;
-        int num4 = num % 100;
+// void Polindrom(int num)
+// {
+//     if (num < 10000 || num > 99999)
+//     {
+//         Console.WriteLine("Неправильно введено число");
+//     }
+//     else
+//     {
+//         int num3 = num / 1000;
+//         int num4 = num % 100;
 
-        if (num3 / 10 == num4 % 10)
-        {
-            if (num3 % 10 == num4 / 10)
+//         if (num3 / 10 == num4 % 10)
+//         {
+//             if (num3 % 10 == num4 / 10)
 
-                Console.WriteLine($"Число {num} является палиндромом");
-        }
-        else
-        {
-            Console.WriteLine($"Число {num} не является палиндромом");
-        }
-    }
+//                 Console.WriteLine($"Число {num} является палиндромом");
+//         }
+//         else
+//         {
+//             Console.WriteLine($"Число {num} не является палиндромом");
+//         }
+//     }
 
-}
-Console.WriteLine("input x=");
-int x = Convert.ToInt32(Console.ReadLine());
-Polindrom(x);
+// }
+// Console.WriteLine("input x=");
+// int x = Convert.ToInt32(Console.ReadLine());
+// Polindrom(x);
 
 //====================
 
@@ -106,21 +106,21 @@ Polindrom(x);
 
 //=======================
 
-// void Cube(int N)
-// {
-//     if (N<1)
-//     {
-//         Console.WriteLine("Вы ввели неправильные данные");
-//     }
-//     int index=1;
-//     while(index < N+1) 
-//     {
-//         Console.WriteLine($"{index} -> {Math.Pow(index,3)}");
-//     index=index+1;
-//     }
-// }
-// Console.WriteLine("input N=");
-//  int x=Convert.ToInt32(Console.ReadLine());
-//  Cube(x);
+void Cube(int N)
+{
+    if (N<1)
+    {
+        Console.WriteLine("Вы ввели неправильные данные");
+    }
+    int index=1;
+    while(index < N+1) 
+    {
+        Console.WriteLine($"{index} -> {Math.Pow(index,3)}");
+    index=index+1;
+    }
+}
+Console.WriteLine("input N=");
+ int x=Convert.ToInt32(Console.ReadLine());
+ Cube(x);
 
  //=============================
