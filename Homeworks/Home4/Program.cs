@@ -84,14 +84,13 @@
 
 // Вариант для вводимых чисел
 
-int[] CreateRandomArray(int size, int minValue, int MaxValue)
+int[] CreateRandomArray(int size)
 {
     int[] myArray = new int[size];
     for (int i = 0; i < size; i++)
     {
-       // myArray[i] = new Random().Next(minValue, MaxValue + 1);
-       Console.WriteLine($"Введите {i+1} элемент массива");
-       myArray[i]= Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine($"Введите {i + 1} элемент массива");
+        myArray[i] = Convert.ToInt32(Console.ReadLine());
     }
     return myArray;
 }
@@ -106,6 +105,6 @@ void ShowArray(int[] array)
 }
 Console.WriteLine("Размер массива");
 int Length = Convert.ToInt32(Console.ReadLine());
-ShowArray(CreateRandomArray(Length, 1, 2));
+ShowArray(CreateRandomArray(Length));
 
 
