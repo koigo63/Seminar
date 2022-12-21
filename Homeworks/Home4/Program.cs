@@ -108,3 +108,4 @@ Console.WriteLine("Размер массива");
 int Length = Convert.ToInt32(Console.ReadLine());
 ShowArray(CreateRandomArray(Length, 1, 2));
 
+
