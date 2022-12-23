@@ -155,45 +155,45 @@
 
 //*Пример для массива из 5, а не 123 элементов. В своём решении сделайте для 123*
 
-int[] CreateRandomArray(int size) //, int minValue, int MaxValue)
-{
-    int[] myArray = new int[size];
-    for (int i = 0; i < size; i++)
-    {
-        myArray[i] = new Random().Next(0,1000);
-    }
-    return myArray;
-}
-void ShowArray(int[] array)
-{
-    Console.WriteLine("Полученный массив->");
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
+// int[] CreateRandomArray(int size) //, int minValue, int MaxValue)
+// {
+//     int[] myArray = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         myArray[i] = new Random().Next(0,1000);
+//     }
+//     return myArray;
+// }
+// void ShowArray(int[] array)
+// {
+//     Console.WriteLine("Полученный массив->");
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
        
-    }
-     Console.WriteLine();
-}
+//     }
+//      Console.WriteLine();
+// }
 
-void Sum(int[] array, int num, int num2)
-{
-int count=0;
-for (int i = 0; i < array.Length; i++)
-    {
-      if (array[i]>=num && array[i]<=num2)
-      count =count+1;
+// void Sum(int[] array, int num, int num2)
+// {
+// int count=0;
+// for (int i = 0; i < array.Length; i++)
+//     {
+//       if (array[i]>=num && array[i]<=num2)
+//       count =count+1;
         
-    }
-Console.WriteLine(count);
+//     }
+// Console.WriteLine(count);
 
-}
+// }
 
- Console.WriteLine("Размер массива");
-int Length = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(" Введите нижнюю границу");
-int numb = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(" Введите верхнюю гграницу");
-int numb2 = Convert.ToInt32(Console.ReadLine());
-int[] newarray=CreateRandomArray(Length);
-ShowArray(newarray);
-Sum( newarray ,numb, numb2);
+//  Console.WriteLine("Размер массива");
+// int Length = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(" Введите нижнюю границу");
+// int numb = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(" Введите верхнюю гграницу");
+// int numb2 = Convert.ToInt32(Console.ReadLine());
+// int[] newarray=CreateRandomArray(Length);
+// ShowArray(newarray);
+// Sum( newarray ,numb, numb2);
