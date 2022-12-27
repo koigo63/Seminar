@@ -153,50 +153,47 @@ void Show2DArray(int[,] array)
     }
     Console.WriteLine();
 }
-int [,] TurnArray(int[,] array)
+int[,] TurnArray(int[,] array)
 {
     int[,] newTurnarray = new int[array.GetLength(1), array.GetLength(0)];
     for (int i = 0; i < newTurnarray.GetLength(0); i++)
     {
         for (int j = 0; j < newTurnarray.GetLength(1); j++)
         {
-            newTurnarray[i,j]=array[j, i];
+            newTurnarray[i, j] = array[j, i];
             //Console.Write(newTurnarray[i,j]+ " ");
         }
-      //Console.WriteLine();
-        
+        //Console.WriteLine();
+
     }
     return newTurnarray;
-        
+
 }
 ///
 
 void AverageColumn(int[,] array)
-{ double average=0;
-  double elem=0;
-  int columns=0;
-  
- 
-  
-            for (int i = 0; i < array.GetLength(0); i++)
+{
+    double average = 0;
+    int columns = 0;
+
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        double sum = 0;
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            int sum=0;
-            for (int j = 0; j < array.GetLength(1); j++)
-            {
-              sum = sum +array[i,j];
-              columns++;       
-            }
-                       elem =sum;
-          
-        Console.WriteLine($"Сумма {columns/array.GetLength(1)}-го столбца= {elem}");
-              average=Math.Round(elem/array.GetLength(1),2);
-            
-            Console.WriteLine($"Среднеарифметическое {columns/array.GetLength(1)}-го столбца  = {average} ");
-            Console.WriteLine();
+            sum = sum + array[i, j];
+            columns++;
         }
-     
-                 
-                
+
+        Console.WriteLine($"Сумма {columns / array.GetLength(1)}-го столбца= {sum}");
+        average = Math.Round(sum / array.GetLength(1), 2);
+
+        Console.WriteLine($"Среднеарифметическое {columns / array.GetLength(1)}-го столбца  = {average} ");
+        Console.WriteLine();
+    }
+
+
+
 }
 
 Console.Write("Введите количество строк ");
@@ -209,5 +206,5 @@ Console.Write("Введите максимальное значение ");
 int max = Convert.ToInt32(Console.ReadLine());
 int[,] myArray = Create2DRandomArray(m, n, min, max);
 Show2DArray(myArray);
-int[,] newTurnarray=TurnArray(myArray);
+int[,] newTurnarray = TurnArray(myArray);
 AverageColumn(newTurnarray);
