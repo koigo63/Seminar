@@ -13,7 +13,6 @@
 //==========
 
 // int[,] firstArray = { { 1, 4, 7, 2}, { 5, 9, 2, 3 }, { 8, 4, 2, 4 } };
-
 // void Show2DArray(int[,] array)
 // {
 //     for (int i = 0; i < array.GetLength(0); i++)
@@ -29,11 +28,9 @@
 // {
 //     for (int i = 0; i < array.GetLength(0); i++)
 //     {
-
 //         for (int j = 0; j < array.GetLength(1)-1; j++)
 //         {
 //             int maxPosition = 0;
-
 //             for (int m = 1; m < array.GetLength(1); m++)
 //             {
 
@@ -48,19 +45,12 @@
 //                 {
 //                     maxPosition = m;
 //                 }
-
 //             }
-
 //         }
-
 //     }
-
 //     Console.WriteLine();
 //     return array;
-
 // }
-
-
 // Show2DArray(firstArray);
 // SortingArray(firstArray);
 // Show2DArray(firstArray);
