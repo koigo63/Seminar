@@ -207,19 +207,6 @@
 //     }
 // }
 
-
-
-// Console.Write("Введите количество строк ");
-// int row = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите количество столбцов ");
-// int col = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите количество страниц ");
-// int pag = Convert.ToInt32(Console.ReadLine());
-// int[,,] newArray = Create3DRandomArray(row, col, pag);
-// Show3DRandomArray(newArray);
-
-//======================================
-
 //Задача 62. Напишите программу,
 // которая заполнит спирально массив 4 на 4.
 //Например, на выходе получается вот такой массив:
@@ -227,3 +214,91 @@
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
+
+int[,] firstArray = { { 1, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
+
+void Show2DArray(int[,] array)
+{
+    int k = 0;
+    int m = 0;
+    
+
+    for (int j = m; j < array.GetLength(1); j++)
+    {
+        if (j == 0)
+        {
+        array[k, j] = 1;
+        }
+        else
+            array[k, j] = array[k, j - 1] + 1;
+        m = j;
+    }
+    for (int i = k; i < array.GetLength(1); i++)
+    {
+        if (i == 0)
+        { }
+        else
+            array[i, m] = array[i - 1, m] + 1;
+        k = i;
+    }
+    for (int j = m; j >= 0; j = j - 1)
+    {
+        if (j == m)
+        {}
+        else
+            array[k, j] = array[k, j + 1] + 1;
+        m = j;
+    }
+    for (int i = k; i >= array.GetLength(0) - (k + 1); i--)
+    {
+        if (i == k)
+        { }
+        else
+            array[i, m] = array[i + 1, m] + 1;
+        k = i;
+    }
+    for (int j = m; j <= array.GetLength(1) - (k + 1); j = j + 1)
+    {
+        if (j == m)
+        {}
+        else
+            array[k, j] = array[k, j - 1] + 1;
+        m = j;
+    }
+    for (int i = k; i <= array.GetLength(1) - (k + 1); i++)
+    {
+        if (i == k)
+        {}
+        else
+            array[i, m] = array[i - 1, m] + 1;
+        k = i;
+    }
+    for (int j = m; j > array.GetLength(1) - 4; j = j - 1)
+    {
+        if (j == m)
+        {}
+        else
+            array[k, j] = array[k, j + 1] + 1;
+        m = j;
+    }
+}
+
+void Show2DArray1(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j] < 10) Console.Write("0" + array[i, j] + " ");
+            else Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+}
+Show2DArray(firstArray);
+Console.WriteLine();
+Show2DArray1(firstArray);
+Console.WriteLine();
+
+
+
