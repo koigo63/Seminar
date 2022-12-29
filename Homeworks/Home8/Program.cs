@@ -226,9 +226,7 @@ void Show2DArray(int[,] array)
     for (int j = m; j < array.GetLength(1); j++)
     {
         if (j == 0)
-        {
-        array[k, j] = 1;
-        }
+        {}
         else
             array[k, j] = array[k, j - 1] + 1;
         m = j;
