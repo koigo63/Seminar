@@ -174,30 +174,49 @@
 // 26(1,0,1) 55(1,1,1)
 //=====
 
-// void Show3DRandomArray(int rows, int column,int pag)
+// int[,,] Create3DRandomArray(int rows, int column, int pag)
 // {
-//         int[,,] myArray = new int[rows, column, pag];
+//     int[,,] myArray = new int[rows, column, pag];
+
+//     for (int i = 0; i < myArray.GetLength(1); i++)
+//     {
+//         for (int j = 0; j < myArray.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < myArray.GetLength(2); k++)
+//             {
+//                 myArray[i, j, k] = new Random().Next(10, 100);
+//             }
+//         }
+//     }
+//     return myArray;
+// }
+// void Show3DRandomArray(int[,,] myArray)
+// {
+//     //   int[,,] myArray = new int[rows, column, pag];
 //     for (int i = 0; i < myArray.GetLength(0); i++)
 //     {
 //         for (int j = 0; j < myArray.GetLength(1); j++)
 //         {
-          
-//             for (int k = 0; k <myArray.GetLength(2); k++)
+//             for (int k = 0; k < myArray.GetLength(2); k++)
 //             {
 //                 myArray[i, j, k] = new Random().Next(10, 100);
-//                 Console.Write(myArray[i,j,k]+$" ({i},{j},{k}) ");
-//                            }
-//              Console.WriteLine();
+//                 Console.Write(myArray[i, j, k] + $" ({i},{j},{k}) ");
+//             }
+//             Console.WriteLine();
 //         }
-//           }
 //     }
+// }
+
+
+
 // Console.Write("Введите количество строк ");
 // int row = Convert.ToInt32(Console.ReadLine());
 // Console.Write("Введите количество столбцов ");
 // int col = Convert.ToInt32(Console.ReadLine());
 // Console.Write("Введите количество страниц ");
 // int pag = Convert.ToInt32(Console.ReadLine());
-// Show3DRandomArray(row,col, pag);
+// int[,,] newArray = Create3DRandomArray(row, col, pag);
+// Show3DRandomArray(newArray);
 
 //======================================
 
