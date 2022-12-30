@@ -174,39 +174,50 @@
 // 26(1,0,1) 55(1,1,1)
 //=====
 
-// int[,,] Create3DRandomArray(int rows, int column, int pag)
-// {
-//     int[,,] myArray = new int[rows, column, pag];
+int[,,] Create3DRandomArray(int rows, int column, int pag)
+{
+    int[,,] myArray = new int[rows, column, pag];
 
-//     for (int i = 0; i < myArray.GetLength(1); i++)
-//     {
-//         for (int j = 0; j < myArray.GetLength(1); j++)
-//         {
-//             for (int k = 0; k < myArray.GetLength(2); k++)
-//             {
-//                 myArray[i, j, k] = new Random().Next(10, 100);
-//             }
-//         }
-//     }
-//     return myArray;
-// }
-// void Show3DRandomArray(int[,,] myArray)
-// {
-//     //   int[,,] myArray = new int[rows, column, pag];
-//     for (int i = 0; i < myArray.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < myArray.GetLength(1); j++)
-//         {
-//             for (int k = 0; k < myArray.GetLength(2); k++)
-//             {
-//                 myArray[i, j, k] = new Random().Next(10, 100);
-//                 Console.Write(myArray[i, j, k] + $" ({i},{j},{k}) ");
-//             }
-//             Console.WriteLine();
-//         }
-//     }
-// }
+    for (int i = 0; i < myArray.GetLength(1); i++)
+    {
+        for (int j = 0; j < myArray.GetLength(1); j++)
+        {
+            for (int k = 0; k < myArray.GetLength(2); k++)
+            {
+                myArray[i, j, k] = new Random().Next(10, 100);
+            }
+        }
+    }
+    return myArray;
+}
+void Show3DRandomArray(int[,,] myArray)
+{
+    //   int[,,] myArray = new int[rows, column, pag];
+    for (int i = 0; i < myArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < myArray.GetLength(1); j++)
+        {
+            for (int k = 0; k < myArray.GetLength(2); k++)
+            {
+                myArray[i, j, k] = new Random().Next(10, 100);
+                Console.Write(myArray[i, j, k] + $" ({i},{j},{k}) ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
 
+Console.Write("Введите количество строк ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество страниц ");
+int min = Convert.ToInt32(Console.ReadLine());
+int[,,] myArray = Create3DRandomArray(m, n, min);
+Show3DRandomArray(myArray);
+
+
+// ==============================================
 //Задача 62. Напишите программу,
 // которая заполнит спирально массив 4 на 4.
 //Например, на выходе получается вот такой массив:
@@ -214,91 +225,91 @@
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
+//=============================
 
-int[,] firstArray = { { 1, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
+// int[,] Show2DArray()
+// {
+//     int k = 0;
+//     int m = 0;
+//     int[,] array = new int[4,4];
 
-void Show2DArray(int[,] array)
-{
-    int k = 0;
-    int m = 0;
-    
+//     for (int j = m; j < array.GetLength(1); j++)
+//     {
+//         if (j == 0)
+//         {
+//         array[k, j] = 1;
+//         }
+//         else
+//             array[k, j] = array[k, j - 1] + 1;
+//         m = j;
+//     }
+//     for (int i = k; i < array.GetLength(1); i++)
+//     {
+//         if (i == 0)
+//         { }
+//         else
+//             array[i, m] = array[i - 1, m] + 1;
+//         k = i;
+//     }
+//     for (int j = m; j >= 0; j = j - 1)
+//     {
+//         if (j == m)
+//         {}
+//         else
+//             array[k, j] = array[k, j + 1] + 1;
+//         m = j;
+//     }
+//     for (int i = k; i >= array.GetLength(0) - (k + 1); i--)
+//     {
+//         if (i == k)
+//         { }
+//         else
+//             array[i, m] = array[i + 1, m] + 1;
+//         k = i;
+//     }
+//     for (int j = m; j <= array.GetLength(1) - (k + 1); j = j + 1)
+//     {
+//         if (j == m)
+//         {}
+//         else
+//             array[k, j] = array[k, j - 1] + 1;
+//         m = j;
+//     }
+//     for (int i = k; i <= array.GetLength(1) - (k + 1); i++)
+//     {
+//         if (i == k)
+//         {}
+//         else
+//             array[i, m] = array[i - 1, m] + 1;
+//         k = i;
+//     }
+//     for (int j = m; j > array.GetLength(1) - 4; j = j - 1)
+//     {
+//         if (j == m)
+//         {}
+//         else
+//             array[k, j] = array[k, j + 1] + 1;
+//         m = j;
+//     }
+//     return array;
+// }
 
-    for (int j = m; j < array.GetLength(1); j++)
-    {
-        if (j == 0)
-        {
-        array[k, j] = 1;
-        }
-        else
-            array[k, j] = array[k, j - 1] + 1;
-        m = j;
-    }
-    for (int i = k; i < array.GetLength(1); i++)
-    {
-        if (i == 0)
-        { }
-        else
-            array[i, m] = array[i - 1, m] + 1;
-        k = i;
-    }
-    for (int j = m; j >= 0; j = j - 1)
-    {
-        if (j == m)
-        {}
-        else
-            array[k, j] = array[k, j + 1] + 1;
-        m = j;
-    }
-    for (int i = k; i >= array.GetLength(0) - (k + 1); i--)
-    {
-        if (i == k)
-        { }
-        else
-            array[i, m] = array[i + 1, m] + 1;
-        k = i;
-    }
-    for (int j = m; j <= array.GetLength(1) - (k + 1); j = j + 1)
-    {
-        if (j == m)
-        {}
-        else
-            array[k, j] = array[k, j - 1] + 1;
-        m = j;
-    }
-    for (int i = k; i <= array.GetLength(1) - (k + 1); i++)
-    {
-        if (i == k)
-        {}
-        else
-            array[i, m] = array[i - 1, m] + 1;
-        k = i;
-    }
-    for (int j = m; j > array.GetLength(1) - 4; j = j - 1)
-    {
-        if (j == m)
-        {}
-        else
-            array[k, j] = array[k, j + 1] + 1;
-        m = j;
-    }
-}
+// void Show2DArray1(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (array[i, j] < 10) Console.Write("0" + array[i, j] + " ");
+//             else Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// int[,] array=Show2DArray();
+// Console.WriteLine();
+// Show2DArray1(array);
+// Console.WriteLine();
 
-void Show2DArray1(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (array[i, j] < 10) Console.Write("0" + array[i, j] + " ");
-            else Console.Write(array[i, j] + " ");
-        }
-        Console.WriteLine();
-    }
-}
-Show2DArray(firstArray);
-Console.WriteLine();
-Show2DArray1(firstArray);
-Console.WriteLine();
-
-
+//=======
 
