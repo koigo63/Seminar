@@ -5,50 +5,51 @@
 
 //[1 2 3 4 5] -> [5 4 3 2 1]
 //[6 7 3 6] -> [6 3 7 6]
-// int[] CreateRandomArray(int size, int minValue, int MaxValue)
-// {
-//     int[] myArray = new int[size];
-//     for (int i = 0; i < size; i++)
-//     {
-//         myArray[i] = new Random().Next(minValue, MaxValue + 1);
-//     }
-//     return myArray;
-// }
-// void ShowArray(int[] array)
-// {
-//     Console.WriteLine("Полученный массив ->:");
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         Console.Write(array[i] + " ");
-//     }
-//     Console.WriteLine();
-// }
+int[] CreateRandomArray(int size, int minValue, int MaxValue)
+{
+    int[] myArray = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        myArray[i] = new Random().Next(minValue, MaxValue + 1);
+    }
+    return myArray;
+}
+void ShowArray(int[] array)
+{
+    Console.WriteLine("Полученный массив ->:");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
 
 
-// int[] ReverseArray(int[] array)
-// {
-//     for(int i = 0; i < array.Length/2; i++) // 4 6 8 1
-//     {
-//         int temp = array[i];
-//         array[i] = array[array.Length - 1 - i];
-//         array[array.Length - 1 - i] = temp;
-//     }
-//     return array;
-// }
+int[] ReverseArray(int[] array)
+{
+    for(int i = 0; i < array.Length/2; i++) // 4 6 8 1
+    {
+        int temp = array[i];
+        array[i] = array[array.Length - 1 - i];
+        array[array.Length - 1 - i] = temp;
+    }
+    return array;
+}
 
 
-// Console.WriteLine("Введите размер массива:");
-// int lenght = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите минимально возможное значение элемента массива:");
-// int min = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите максимально возможное значение элемента массива:"); 
-// int max = Convert.ToInt32(Console.ReadLine());                                  
+Console.WriteLine("Введите размер массива:");
+int lenght = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите минимально возможное значение элемента массива:");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите максимально возможное значение элемента массива:"); 
+int max = Convert.ToInt32(Console.ReadLine());                                  
 
-// int[] newArray = CreateRandomArray(lenght,min,max);
+int[] newArray = CreateRandomArray(lenght,min,max);
 
-// ShowArray(newArray);
-// newArray = ReverseArray(newArray);
-// ShowArray(newArray);
+ShowArray(newArray);
+ShowArray(newArray);
+newArray = ReverseArray(newArray);
+ShowArray(newArray);
 
 //=====
 //Задача 2.Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник с сторонами такой длины.
@@ -112,20 +113,20 @@
 // fibonachi (num);
 //++++++
 
-void dvoichniy (int num)
-{
-    string result = string.Empty;
-    while (num > 0)
-    {
-        int ostatok = num % 2;
-        result = ostatok + result;
-        num = num / 2;
+// void dvoichniy (int num)
+// {
+//     string result = string.Empty;
+//     while (num > 0)
+//     {
+//         int ostatok = num % 2;
+//         result = ostatok + result;
+//         num = num / 2;
     
-    }
-    Console.Write(result);
-}
+//     }
+//     Console.Write(result);
+// }
 
-Console.WriteLine("Введите число N");
-int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число N");
+// int num = Convert.ToInt32(Console.ReadLine());
 
-dvoichniy (num);
+// dvoichniy (num);

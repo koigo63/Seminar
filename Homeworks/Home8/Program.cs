@@ -190,31 +190,82 @@ int[,,] Create3DRandomArray(int rows, int column, int pag)
     }
     return myArray;
 }
-void Show3DRandomArray(int[,,] myArray)
+void Show3DRandomArray(int[,,] nArray)
 {
-    //   int[,,] myArray = new int[rows, column, pag];
-    for (int i = 0; i < myArray.GetLength(0); i++)
+     for (int i = 0; i < nArray.GetLength(0); i++)
     {
-        for (int j = 0; j < myArray.GetLength(1); j++)
+        for (int j = 0; j < nArray.GetLength(1); j++)
         {
-            for (int k = 0; k < myArray.GetLength(2); k++)
+            for (int k = 0; k < nArray.GetLength(2); k++)
             {
-                myArray[i, j, k] = new Random().Next(10, 100);
-                Console.Write(myArray[i, j, k] + $" ({i},{j},{k}) ");
+                Console.Write(nArray[i, j, k] + $" ({i},{j},{k}) ");
             }
             Console.WriteLine();
         }
     }
 }
 
+int[] Repeat3DRandomArray(int[,,] myArray)
+{
+    int i = 0;
+    int j = 0;
+    int k = 0;
+    int[] repeat = new int[myArray.GetLength(0) * myArray.GetLength(1) * myArray.GetLength(1)];
+    for (i = 0; i < myArray.GetLength(0); i++)
+    {
+        for (j = 0; j < myArray.GetLength(1); j++)
+        {
+            for (k = 0; k < myArray.GetLength(2); k++)
+            {
+                repeat[4 * i + 2 * j + k] = myArray[i, j, k];
+         }
+        
+        }
+            }
+     return repeat;
+}
+void ShowRandomArray(int[] myArray)
+{
+    int count = 0;
+    int n=0;
+    for (int i = 0; i < myArray.GetLength(0); i++)
+    {
+        
+                
+          // int[] array = { 10, 5, 10, 2, 2, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 12 };
+          Console.Write(myArray[i] + " ");
+        for (int m = 0; m < myArray.Length; m++)
+        {
+            count = 0;
+            for (int j = 0; j < myArray.Length; j++)
+            {
+
+                if (myArray[m] == myArray[j])
+                    count =count+1;
+                        
+            }
+             if(count>1)
+             n=2;
+             //Console.WriteLine("\t\n " + myArray[i] + " occurs " + count + " times");
+        }
+      
+    }
+    Console.WriteLine();
+    if(n==2) 
+   Console.WriteLine("Есть повторяющиеся числа"); 
+}
 Console.Write("Введите количество строк ");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество столбцов ");
 int n = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество страниц ");
 int min = Convert.ToInt32(Console.ReadLine());
-int[,,] myArray = Create3DRandomArray(m, n, min);
-Show3DRandomArray(myArray);
+
+int[,,] newArray = Create3DRandomArray(m, n, min);
+
+Show3DRandomArray(newArray);
+int[] new1Array= Repeat3DRandomArray(newArray);
+ShowRandomArray(new1Array);
 
 
 // ==============================================

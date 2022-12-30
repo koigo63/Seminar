@@ -136,7 +136,7 @@
 // for (int i = 0; i < array.Length; i++)
 
 //     if (num ==array[i]) Console.WriteLine($" Число {num}входит в массив");
-   
+
 // }
 
 
@@ -170,7 +170,7 @@
 //     for (int i = 0; i < array.Length; i++)
 //     {
 //         Console.Write(array[i] + " ");
-       
+
 //     }
 //      Console.WriteLine();
 // }
@@ -182,7 +182,7 @@
 //     {
 //       if (array[i]>=num && array[i]<=num2)
 //       count =count+1;
-        
+
 //     }
 // Console.WriteLine(count);
 
@@ -197,3 +197,17 @@
 // int[] newarray=CreateRandomArray(Length);
 // ShowArray(newarray);
 // Sum( newarray ,numb, numb2);
+int[] array = { 10, 5, 3, 2};
+         for (int i = 0; i < array.Length; i++)
+        {
+            int count = 0;
+            for (int j = 0; j < array.Length; j++)
+            {
+
+                if (array[i] == array[j])
+                    count = count + 1;
+            }
+            if (count>1)
+            Console.WriteLine(" Есть повторяющиеся числа");
+        }
+        
