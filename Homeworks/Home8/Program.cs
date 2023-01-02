@@ -190,23 +190,83 @@
 //     }
 //     return myArray;
 // }
-// void Show3DRandomArray(int[,,] myArray)
+// void Show3DRandomArray(int[,,] nArray)
 // {
-//     //   int[,,] myArray = new int[rows, column, pag];
-//     for (int i = 0; i < myArray.GetLength(0); i++)
+//      for (int i = 0; i < nArray.GetLength(0); i++)
 //     {
-//         for (int j = 0; j < myArray.GetLength(1); j++)
+//         for (int j = 0; j < nArray.GetLength(1); j++)
 //         {
-//             for (int k = 0; k < myArray.GetLength(2); k++)
+//             for (int k = 0; k < nArray.GetLength(2); k++)
 //             {
-//                 myArray[i, j, k] = new Random().Next(10, 100);
-//                 Console.Write(myArray[i, j, k] + $" ({i},{j},{k}) ");
+//                 Console.Write(nArray[i, j, k] + $" ({i},{j},{k}) ");
 //             }
 //             Console.WriteLine();
 //         }
 //     }
 // }
 
+// int[] Repeat3DRandomArray(int[,,] myArray)
+// {
+//     int i = 0;
+//     int j = 0;
+//     int k = 0;
+//     int[] repeat = new int[myArray.GetLength(0) * myArray.GetLength(1) * myArray.GetLength(1)];
+//     for (i = 0; i < myArray.GetLength(0); i++)
+//     {
+//         for (j = 0; j < myArray.GetLength(1); j++)
+//         {
+//             for (k = 0; k < myArray.GetLength(2); k++)
+//             {
+//                 repeat[4 * i + 2 * j + k] = myArray[i, j, k];
+//          }
+        
+//         }
+//             }
+//      return repeat;
+// }
+// void ShowRandomArray(int[] myArray)
+// {
+//     int count = 0;
+//     int n=0;
+//     for (int i = 0; i < myArray.GetLength(0); i++)
+//     {
+                      
+//                  Console.Write(myArray[i] + " ");
+//         for (int m = 0; m < myArray.Length; m++)
+//         {
+//             count = 0;
+//             for (int j = 0; j < myArray.Length; j++)
+//             {
+
+//                 if (myArray[m] == myArray[j])
+//                     count =count+1;
+                        
+//             }
+//              if(count>1)
+//              n=2;
+//                 }
+      
+//     }
+//     Console.WriteLine();
+//     if(n==2) 
+//    Console.WriteLine("Есть повторяющиеся числа"); 
+   
+// }
+// Console.Write("Введите количество строк ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество столбцов ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество страниц ");
+// int min = Convert.ToInt32(Console.ReadLine());
+
+// int[,,] newArray = Create3DRandomArray(m, n, min);
+
+// Show3DRandomArray(newArray);
+// int[] new1Array= Repeat3DRandomArray(newArray);
+// ShowRandomArray(new1Array);
+
+
+// ==============================================
 //Задача 62. Напишите программу,
 // которая заполнит спирально массив 4 на 4.
 //Например, на выходе получается вот такой массив:
@@ -214,19 +274,20 @@
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
+//=============================
 
-int[,] firstArray = { { 1, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
-
-void Show2DArray(int[,] array)
+int[,] Show2DArray()
 {
     int k = 0;
     int m = 0;
-    
+    int[,] array = new int[4,4];
 
     for (int j = m; j < array.GetLength(1); j++)
     {
         if (j == 0)
-        {}
+        {
+        array[k, j] = 1;
+        }
         else
             array[k, j] = array[k, j - 1] + 1;
         m = j;
@@ -279,6 +340,7 @@ void Show2DArray(int[,] array)
             array[k, j] = array[k, j + 1] + 1;
         m = j;
     }
+    return array;
 }
 
 void Show2DArray1(int[,] array)
@@ -293,10 +355,11 @@ void Show2DArray1(int[,] array)
         Console.WriteLine();
     }
 }
-Show2DArray(firstArray);
+int[,] array=Show2DArray();
 Console.WriteLine();
-Show2DArray1(firstArray);
+Show2DArray1(array);
 Console.WriteLine();
 
 
+//=======
 
