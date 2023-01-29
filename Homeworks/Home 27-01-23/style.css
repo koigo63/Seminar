@@ -1,0 +1,98 @@
+body {
+    margin: 5px;
+    background-color: darkgrey;
+}
+
+h1,
+header {
+    text-align: center;
+}
+
+header {
+    font-size: 34px;
+    font-style: italic;
+    
+}
+
+.wrapper {
+    width: 800px;
+    margin: 0 auto;
+    background-color: bisque;
+}
+
+header {
+    color: rgb(38, 128, 108);
+    background-color: rgb(230, 252, 245);
+    padding: 0 0 5px 0;
+    overflow: hidden;
+ 
+
+}
+
+main {
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+img {
+    float: left;
+    margin-right: 10px;
+     
+}
+
+.second {
+    
+    color: green;
+}
+.second2 {
+    width: 400px;
+    color: green;
+}
+
+.chat {
+    color: rgb(160, 93, 11);
+    list-style-type: none;
+    padding-inline-start: 0;
+ 
+}
+.proezd{
+    font-size: 24px;
+    color: rgb(70, 150, 119);
+    display: flex;
+    justify-content: space-between;
+}
+a.first {
+    color: rgb(128, 89, 7); 
+}
+h2 {
+    font-size: 26px;
+    color: rgb(124, 78, 10);
+}
+button{
+    background-color: rgb(160, 93, 11); 
+    color: rgb(249, 250, 249);
+}
+footer{
+    background-color: rgb(15, 12, 172); 
+    color: rgb(249, 250, 249);
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+a.second {
+    color: rgb(249, 250, 249);
+}
+h1{
+    font-style: oblique;
+    color: rgb(128, 89, 7);
+}
+.forimage {
+    margin-bottom: 20px;
+  
+}
+.for{
+    display: flex;
+    justify-content: center;
+}
