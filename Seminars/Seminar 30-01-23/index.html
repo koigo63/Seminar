@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        Моя первая страничка
+        
+    </header>
+    <main>
+        <h1>Содержание</h1>
+        <p>
+            <img src="./img/photo_2022-12-23_22-54-09.jpg" alt="фото" width="200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, aperiam similique obcaecati animi dolore 
+        </p>
+        <p class="second">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam odit dolorum libero excepturi fuga hic repellendus magni odio quibusdam ut. Assumenda aperiam autem voluptatibus explicabo natus in dolorem. Repudiandae nihil cumque dignissimos quis minus impedit quas praesentium commodi corporis, laborum eligendi voluptate a, aliquam perferendis odit esse cupiditate? Iste, debitis.
+        </p>
+
+        <a href="http://yandex.ru" target="_blank">Ссылка</a>
+        <h2>Чат</h2>
+        <input type="text" id="h" placeholder="Ваш рост (см)"><br>
+        <input type="text" id="m" placeholder="Ваш вес"><br>
+        <button onclick="start()">Рассчитать</button>
+        <ul class="chat">
+            <li id="result">Привет</li>
+            <li>Как дела?</li>
+            <li>Список 1</li>
+        </ul>
+    </main>
+   
+    <footer>
+        (c)2023 
+    </footer>
+</div>
+
+<script>
+   
+    function start() {
+            var m = document.getElementById("m").value;
+            var h = document.getElementById("h").value;
+            let x = m * 10000 / h / h;
+            if (x <= 16) {
+                str = "Нехватка веса " x;
+            }
+            if (x > 16 && x < 25) {
+                str = "Нормальный вес";
+            }
+            if (x >= 25) {
+                str = "Избыточный вес";
+            }
+            document.getElementById('result').innerText = str;
+        }
+    
+</script>
+</body>
+</html>
