@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Чат</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <p>
+                <img src="./img/porovoz.png" alt="logotip" width="200">
+            </p>
+            <p class="hed">
+                Моя первая страничка
+            </p>
+        </header>
+        <main>
+            <div class="proezd">
+                <a class="first" href="./index.html">Главная</a>
+                <a class="first" href="./produkt.html">Продукция</a>
+                <a class="first" href="./proezd.html">Как проехать</a>
+                <a class="first" href="./chat.html">Чат</a>
+            </div>
+            <div id="chat1">
+                <h2>Чат</h2>
+
+                <input type="text" id="message" placeholder="Введите сообщение">
+                <button onclick="send()">Отправить</button>
+                <div id="chat2">
+                </div>
+            </div>
+
+        </main>
+        <footer>
+            <div class="foot">
+                (c)2023
+            </div>
+        </footer>
+    </div>
+    <script>
+        setInterval(get, 2000);
+
+        function send() {
+            alert(document.getElementById("message").value);
+        }
+
+
+        function get() {
+            console.log("функция get");
+            (async () => {
+                var response = await fetch('http://127.0.0.1:5500/Homeworks/Home%2030-01-23/chat.txt');
+                var answer = await response.text();
+                document.getElementById('chat2').innerText = answer;
+            }
+            )();
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
