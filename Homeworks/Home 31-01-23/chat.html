@@ -45,8 +45,46 @@
             </div>
         </footer>
     </div>
-    <script src="scripts/script.js"></script>
     
+    <script>
+        get();
+
+    setInterval(get, 2000);
+
+    function send() {
+        var message = document.getElementById('message').value;
+
+        (async () => {
+                var response = await fetch('http://k92721hp.beget.tech/chat.php?message=' + message);
+                var answer = await response.text();
+                document.getElementById('message').value = '';
+            }
+        )();
+
+
+    }
+
+
+    function test() {
+        console.log("вывод");
+    }
+
+
+    function get() {
+
+        (async () => {
+                var response = await fetch('http://k92721hp.beget.tech/chat.php');
+                var answer = await response.text();
+                document.getElementById('chat2').innerText = answer;
+            }
+        )();
+
+
+    }
+ 
+         
+     </script>
+ 
 
 </body>
 
