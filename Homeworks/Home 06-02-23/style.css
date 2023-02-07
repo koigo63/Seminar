@@ -1,0 +1,40 @@
+a {
+  text-decoration: none;
+}
+.menu-link {
+  color: cornflowerblue;
+  font-size: 16px;
+  line-height: 20px;
+}
+.heading_1 {
+  color: #222222;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+.parag {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #7d7987;
+}
+.heading_2 {
+  color: coral;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 80px;
+  text-align: center;
+}
+.heading_3 {
+  color: rgb(158, 47, 6);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+}
