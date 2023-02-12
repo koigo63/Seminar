@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("/fonts/Gilroy-Medium.eot");
+  src: url("/fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/Gilroy-Medium.woff") format("woff"),
+    url("/fonts/Gilroy-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("/fonts/Gilroy-Bold.eot");
+  src: url("/fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/Gilroy-Bold.woff") format("woff"),
+    url("/fonts/Gilroy-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Gilroy-Semibold";
+  src: url("/fonts/Gilroy-Semibold.eot");
+  src: url("/fonts/Gilroy-Semibold.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/Gilroy-Semibold.woff") format("woff"),
+    url("/fonts/Gilroy-Semibold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("/fonts/Gilroy-Regular.eot");
+  src: url("/fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/Gilroy-Regular.woff") format("woff"),
+    url("/fonts/Gilroy-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+}
+.top .heading {
+  display: flex;
+  justify-content: center;
+}
+.heading {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 500px;
+}
+.top__menu {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 39px;
+}
+.black__menu {
+  font-family: "Gilroy-Medium";
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+.red__menu {
+  font-family: "Gilroy-SemiBold";
+  font-size: 14px;
+  line-height: 16px;
+  color: #f25822;
+}
+.top__content {
+  margin-top: 84px;
+  display: flex;
+  gap: 39px;
+  align-items: top;
+  justify-content: center;
+}
+.top__info {
+  width: 522px;
+}
+
+.top__link {
+  margin-top: 162px;
+  padding-top: 97px;
+  padding-bottom: 96px;
+}
+h1 {
+  font-family: "Gilroy-Bold";
+  font-size: 60px;
+  line-height: 74px;
+  color: #000000;
+}
+.top__info p {
+  margin-top: 17px;
+  font-family: "Gilroy-Medium";
+  font-size: 20px;
+  line-height: 25px;
+  color: #888888;
+}
+.top__button {
+  margin-top: 37px;
+}
+.orange__button {
+  width: 140px;
+  height: 50px;
+  background: #f25822;
+  box-shadow: 4px 4px 8px rgba(242, 88, 34, 0.2);
+  border-radius: 50px;
+  border: 0;
+  font-family: "Gilroy-Bold";
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+}
+.white__button {
+  width: 140px;
+  height: 50px;
+  background: #ffffff;
+  border: 0;
+  border-radius: 50px;
+  font-family: "Gilroy-Bold";
+  font-size: 15px;
+  line-height: 18px;
+  color: #aaaaaa;
+}
+.top__link {
+  margin-top: 162px;
+  padding-top: 97px;
+  padding-bottom: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+.second {
+  margin-top: 100px;
+}
+.second__top {
+  margin-right: calc(50% - 620px);
+  margin-left: calc(50% - 600px);
+  margin-bottom: 105px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 60px;
+  background-color: #ffffff;
+}
+.second__top1 {
+  width: 310px;
+  padding-top: 40px;
+  padding-bottom: 25px;
+}
+.second__top2 {
+  width: 370px;
+  padding-top: 40px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: #ffffff;
+  box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
+}
+
+.second__top1 h2 {
+  margin-top: 25px;
+  font-family: "Gilroy-Bold";
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+.second__top1 p {
+  margin-top: 15px;
+  font-family: "Gilroy-Regular";
+  font-size: 15px;
+  line-height: 150%;
+  color: #666666;
+}
+.second__top1 a {
+  margin-top: 25px;
+  font-family: "Gilroy-Bold";
+  font-size: 11px;
+  line-height: 150%;
+  color: #000000;
+}
+.second__top2 h2 {
+  margin-top: 25px;
+  font-family: "Gilroy-Bold";
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.second__top2 p {
+  margin-top: 15px;
+  font-family: "Gilroy-Regular";
+  font-size: 15px;
+  line-height: 150%;
+  color: #666666;
+}
+.second__top2 a {
+  font-family: "Gilroy-Bold";
+  font-size: 11px;
+  line-height: 150%;
+  color: #000000;
+}
+
+.second__center {
+  background-color: #fafafa;
+}
+.second__center h1 {
+  padding-top: 88px;
+  display: flex;
+  justify-content: center;
+  font-family: "Gilroy-Bold";
+  font-size: 45px;
+  line-height: 53px;
+  color: #000000;
+}
+
+.second__center__par {
+  display: flex;
+  justify-content: center;
+}
+.second__center p {
+  margin-top: 19px;
+  width: 682px;
+  text-align: center;
+  font-family: "Gilroy-Regular";
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #666666;
+}
+
+.second__bottom {
+  padding-top: 55px;
+  padding-left: calc(50% - 500px);
+  padding-right: calc(50% - 800px);
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  background-color: #fafafa;
+}
+.second__bottom1 {
+  background: #ffffff;
+}
+.second__bottom1 h2 {
+  text-align: center;
+  font-family: "Gilroy-Bold";
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+.second__bottom1 p {
+  margin-left: 30px;
+  width: 310px;
+  font-family: "Gilroy-Regular";
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  color: #aaaaaa;
+}
+.second__button {
+  margin-top: 40px;
+  margin-left: calc(50% - 70px);
+  margin-bottom: 65px;
+  width: 140px;
+  height: 50px;
+  background: #f25822;
+  box-shadow: 4px 4px 8px rgba(242, 88, 34, 0.2);
+  border-radius: 50px;
+  border: 0;
+  font-family: "Gilroy-Bold";
+  font-size: 13px;
+  line-height: 150%;
+  text-align: center;
+  color: #ffffff;
+}
+.second__bottom2 {
+  background: #ffffff;
+  background: #ffffff;
+  box-shadow: 15px 25px 60px -5px rgba(0, 0, 0, 0.1);
+}
+.second__bottom2 h2 {
+  text-align: center;
+  font-family: "Gilroy-Bold";
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+.second__bottom2 p {
+  margin-left: 30px;
+  width: 310px;
+  font-family: "Gilroy-Regular";
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  color: #aaaaaa;
+}
