@@ -38,6 +38,34 @@
   font-style: normal;
   font-weight: 500;
 }
+.black__menu,
+.top__info p {
+  font-family: "Gilroy-Medium";
+}
+.red__menu {
+  font-family: "Gilroy-SemiBold";
+}
+h1,
+.orange__button,
+.white__button,
+.second__top1 h2,
+.second__top1 a,
+.second__top2 h2,
+.second__center h1,
+.second__top2 a,
+.second__bottom1 h2,
+.second__button,
+.second__bottom2 h2 {
+  font-family: "Gilroy-Bold";
+}
+.second__top1 p,
+.second__top2 p,
+.second__center p,
+.second__bottom1 p,
+.second__bottom2 p {
+  font-family: "Gilroy-Regular";
+}
+
 a {
   text-decoration: none;
 }
@@ -61,13 +89,11 @@ a {
   gap: 39px;
 }
 .black__menu {
-  font-family: "Gilroy-Medium";
   font-size: 14px;
   line-height: 16px;
   color: #000000;
 }
 .red__menu {
-  font-family: "Gilroy-SemiBold";
   font-size: 14px;
   line-height: 16px;
   color: #f25822;
@@ -89,14 +115,12 @@ a {
   padding-bottom: 96px;
 }
 h1 {
-  font-family: "Gilroy-Bold";
   font-size: 60px;
   line-height: 74px;
   color: #000000;
 }
 .top__info p {
   margin-top: 17px;
-  font-family: "Gilroy-Medium";
   font-size: 20px;
   line-height: 25px;
   color: #888888;
@@ -111,7 +135,6 @@ h1 {
   box-shadow: 4px 4px 8px rgba(242, 88, 34, 0.2);
   border-radius: 50px;
   border: 0;
-  font-family: "Gilroy-Bold";
   font-size: 15px;
   line-height: 18px;
   color: #ffffff;
@@ -122,7 +145,6 @@ h1 {
   background: #ffffff;
   border: 0;
   border-radius: 50px;
-  font-family: "Gilroy-Bold";
   font-size: 15px;
   line-height: 18px;
   color: #aaaaaa;
@@ -165,28 +187,24 @@ h1 {
 
 .second__top1 h2 {
   margin-top: 25px;
-  font-family: "Gilroy-Bold";
   font-size: 24px;
   line-height: 28px;
   color: #000000;
 }
 .second__top1 p {
   margin-top: 15px;
-  font-family: "Gilroy-Regular";
   font-size: 15px;
   line-height: 150%;
   color: #666666;
 }
 .second__top1 a {
   margin-top: 25px;
-  font-family: "Gilroy-Bold";
   font-size: 11px;
   line-height: 150%;
   color: #000000;
 }
 .second__top2 h2 {
   margin-top: 25px;
-  font-family: "Gilroy-Bold";
   font-size: 24px;
   line-height: 28px;
   color: #000000;
@@ -194,13 +212,11 @@ h1 {
 
 .second__top2 p {
   margin-top: 15px;
-  font-family: "Gilroy-Regular";
   font-size: 15px;
   line-height: 150%;
   color: #666666;
 }
 .second__top2 a {
-  font-family: "Gilroy-Bold";
   font-size: 11px;
   line-height: 150%;
   color: #000000;
@@ -213,7 +229,6 @@ h1 {
   padding-top: 88px;
   display: flex;
   justify-content: center;
-  font-family: "Gilroy-Bold";
   font-size: 45px;
   line-height: 53px;
   color: #000000;
@@ -227,7 +242,6 @@ h1 {
   margin-top: 19px;
   width: 682px;
   text-align: center;
-  font-family: "Gilroy-Regular";
   font-size: 16px;
   line-height: 150%;
   text-align: center;
@@ -236,8 +250,8 @@ h1 {
 
 .second__bottom {
   padding-top: 55px;
-  padding-left: calc(50% - 500px);
-  padding-right: calc(50% - 800px);
+  padding-left: calc(50% - 615px);
+  padding-right: calc(50% - 615px);
   padding-bottom: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -246,18 +260,18 @@ h1 {
 }
 .second__bottom1 {
   background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .second__bottom1 h2 {
-  text-align: center;
-  font-family: "Gilroy-Bold";
   font-size: 24px;
   line-height: 28px;
   color: #000000;
 }
 .second__bottom1 p {
-  margin-left: 30px;
+  margin-top: 22px;
   width: 310px;
-  font-family: "Gilroy-Regular";
   font-size: 15px;
   line-height: 150%;
   text-align: center;
@@ -265,15 +279,13 @@ h1 {
 }
 .second__button {
   margin-top: 40px;
-  margin-left: calc(50% - 70px);
-  margin-bottom: 65px;
+  margin-bottom: 50px;
   width: 140px;
   height: 50px;
   background: #f25822;
   box-shadow: 4px 4px 8px rgba(242, 88, 34, 0.2);
   border-radius: 50px;
   border: 0;
-  font-family: "Gilroy-Bold";
   font-size: 13px;
   line-height: 150%;
   text-align: center;
@@ -281,20 +293,20 @@ h1 {
 }
 .second__bottom2 {
   background: #ffffff;
-  background: #ffffff;
   box-shadow: 15px 25px 60px -5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .second__bottom2 h2 {
   text-align: center;
-  font-family: "Gilroy-Bold";
   font-size: 24px;
   line-height: 28px;
   color: #000000;
 }
 .second__bottom2 p {
-  margin-left: 30px;
+  margin-top: 22px;
   width: 310px;
-  font-family: "Gilroy-Regular";
   font-size: 15px;
   line-height: 150%;
   text-align: center;
