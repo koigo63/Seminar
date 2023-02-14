@@ -85,3 +85,12 @@ body {
   justify-content: center;
   gap: 70px;
 }
+@media (max-width: 768px) {
+  .top_logo {
+    margin-top: 197px;
+    margin-bottom: 99px;
+    display: flex;
+    justify-content: left;
+    gap: 70px;
+  }
+}
