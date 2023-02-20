@@ -419,7 +419,7 @@ body {
   align-items: center;
 }
 .socnet:hover {
-  background-color: #F16D7F;
+  background-color: #f16d7f;
 }
 .socnet:hover .socsvg path {
   fill: white;
@@ -739,10 +739,17 @@ body {
   .fon__prod__basket {
     display: none;
   }
-  .top__product img:hover ~ .fon__prod__basket {
+  .top__product img:hover .fon__prod__basket {
     display: inline;
   }
-
+  .fon__prod {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 68%;
+    bottom: 1%;
+  }
   .top__product__img {
     width: 100%;
   }
