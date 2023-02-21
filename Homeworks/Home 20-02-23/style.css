@@ -530,17 +530,17 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
+  align-items: center;
   justify-content: space-around;
   gap: 655px;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #fbfbfb;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
-.footer__bottom p {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
+
 .social__network {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1078,6 +1078,7 @@ body {
   .footer__bottom {
     padding-left: 32px;
     padding-right: 32px;
+    padding-bottom: 9px;
     background: #222224;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1098,11 +1099,11 @@ body {
     color: #fbfbfb;
   }
   .footer__bottom p {
-    margin-top: 30px;
-    margin-bottom: 9px;
+    margin-top: 40px;
+    margin-bottom: 0;
   }
   .social__network {
-    margin-top: 43px;
+    margin-top: 13px;
     margin-bottom: 0;
   }
 }
