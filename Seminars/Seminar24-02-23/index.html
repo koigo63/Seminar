@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function GetName(name, surname, age) {
+      //     console.log(`Привет ${name} ${surname} с возрастом ${age}`);
+      //   }
+      //   GetName("Сергей", "Сидоров", 30);
+
+      //   function calculateDeg(num, deg) {
+      //     square = Math.pow(num, deg);
+      //     console.log(` ${num} в степени ${deg} =${square}`);
+      //   }
+      //   calculateDeg(10, 3);
+
+      //   function positiveNumber(numb) {
+      //     numb >= 0 ? console.log("+++") : console.log("---");
+      //   }
+      //   positiveNumber(5);
+      //=====================
+      //   function Summ(param1, param2, param3) {
+      //     console.log(param1 + param2 + param3);
+      //   }
+      //   let param1 = 1;
+      //   let param2 = 2;
+      //   let param3 = 3;
+      //   Summ(param1, param2, param3);
+
+      //   function Pow(num) {
+      //     console.log(num * num);
+      //   }
+      //   Pow(2);
+      //   Pow(3);
+      //   Pow();
+      //===============
+      //   function SquareRoot(number) {
+      //     sqrt = Math.sqrt(number);
+      //     return sqrt;
+      //   }
+      //   console.log(SquareRoot(3) + SquareRoot(4));
+
+      //   function GetMin(numb1, numb2) {
+      //     numb1 < numb2
+      //       ? console.log(`Минимальное число ${numb1}`)
+      //       : numb1 > numb2
+      //       ? console.log(`Минимальное число ${numb2}`)
+      //       : console.log("Числа равны");
+      //   }
+      //   GetMin(-3, 2);
+
+      //   function Test_prime(n) {
+      //     if (n === 1) {
+      //       console.log(false);
+      //     } else if (n === 2) {
+      //       console.log();
+      //     } else {
+      //       for (let x = 2; x < n; x++) {
+      //         n % x === 0 ? (return false) : console.log(true);
+      //       }
+      //     }
+      //   }
+      //   Test_prime(7);
+      function DayWeek(day) {
+        switch (day) {
+          case 1:
+            console.log("понедельник");
+            break;
+          case 2:
+            console.log("вторник");
+            break;
+          case 3:
+            console.log("среда");
+            break;
+          case 4:
+            console.log("четверг");
+            break;
+          case 5:
+            console.log("пятница");
+            break;
+          case 6:
+            console.log("суббота");
+            break;
+          case 7:
+            console.log("воскресенье");
+            break;
+          default:
+            console.log("131");
+            break;
+        }
+      }
+      DayWeek(6);
+      let now = new Date(),
+        hour = now.getHours();
+      function TimeDay(hour) {
+        if (hour > 22 || hour < 6) {
+          console.log("Доброй ночи Иван");
+        } else {
+          if (hour < 12) {
+            console.log("Доброе утро Иван");
+          } else {
+            if (hour < 18) {
+              console.log("Добрый день Иван");
+            } else {
+              console.log("Добрый вечер Иван");
+            }
+          }
+        }
+      }
+      TimeDay(hour);
+      const name = (params) => {
+        
+      }
+    </script>
+  </body>
+</html>
