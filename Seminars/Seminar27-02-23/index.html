@@ -50,11 +50,13 @@
       //   console.log(index);
       // }
 
-      // let x = [];
-      // for (let i = 0; i < 100; i++) {
-      //   x.push(i);
-      // }
-      // x.forEach(number);
+      let x = [];
+      for (let i = 0; i < 100; i++) {
+        x.push(i);
+      }
+      x.forEach((number, index) => {
+        if (number % 2 === 0) console.log(number, index);
+      });
 
       // const array2 = ["aa", "bb", "tt", "ta"];
       // const array7 = [];
