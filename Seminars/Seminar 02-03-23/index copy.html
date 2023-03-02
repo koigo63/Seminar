@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div id="block">
+      <p>1</p>
+      <p>2</p>
+    </div>
+    <p class="www">text 1</p>
+    <p class="www">text 2</p> -->
+    <!-- / -->
+    <!-- <a class="link" href="#">link text html</a>
+    <img class="photo" width="400px" src="" alt="" /> -->
+    <!--  -->
+    <div class="content"></div>
+    <!--  -->
+
+    <script>
+      // const firstParg = document.querySelector("#block p");
+      // console.log(firstParg);
+      // const secondParg = document.querySelector(".www");
+      // console.log(secondParg);
+      //==
+      // const firstLink = document.querySelector(".link");
+      // firstLink.textContent = "link text js";
+      // firstLink.href = "https://developer.mozilla.org/ru/ ";
+      // firstLink.target = "_blank";
+      // console.log(firstLink);
+      // const firstPhoto = document.querySelector(".photo");
+      // firstPhoto.src =
+      //   "https://proprikol.ru/wp-content/uploads/2021/11/fordy-krasivye-kartinki-45.jpg";
+      //=======
+      // const divElement = document.querySelector(".content");
+      // const paragraphElement = document.createElement("p");
+      // paragraphElement.textContent = "Новый текст параграфа";
+      // divElement.appendChild(paragraphElement);
+      // const divElement1 = document.querySelector(".content p");
+      // console.log(divElement1);
+      // divElement1.remove();
+      //=====
+      const buttonElement = document.createElement("button");
+      buttonElement.textContent = "Купить";
+      buttonElement.classList.add("button");
+      divElement.appendChild(buttonElement);
+      // const buttonElement1 = document.querySelector(".button");
+      let count = 0;
+      buttonElement.onclick = function () {
+        console.log((count += 1));
+        buttonElement.textContent = "Текст отправлен";
+      };
+      //=======
+    </script>
+  </body>
+</html>
