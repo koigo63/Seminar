@@ -29,6 +29,7 @@
       const firstLink = document.querySelector(".link");
       firstLink.textContent = "link text js";
       firstLink.href = "https://developer.mozilla.org/ru/ ";
+      firstLink.target = "_blank";
       console.log(firstLink);
       const firstPhoto = document.querySelector(".photo");
       firstPhoto.src =
@@ -46,11 +47,11 @@
       buttonElement.textContent = "Купить";
       buttonElement.classList.add("button");
       divElement.appendChild(buttonElement);
-      const buttonElement1 = document.querySelector(".button");
+      // const buttonElement1 = document.querySelector(".button");
       let count = 0;
-      buttonElement1.onclick = function () {
-        console.log(1);
-        buttonElement1.textContent = "Текст отправлен";
+      buttonElement.onclick = function () {
+        console.log((count += 1));
+        buttonElement.textContent = "Текст отправлен";
       };
       //=======
     </script>
