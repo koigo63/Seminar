@@ -12,15 +12,28 @@
     <script src="data.js"></script>
     <script>
       const data = JSON.parse(dataInfo);
-
       data.forEach((element) => {
-        console.log(element.firstName);
-      });
+        const contentEl = document.querySelector(".content");
+        const imgEl = document.createElement("img");
+        imgEl.classList.add("img");
+        imgEl.src = element.photo;
+        imgEl.setAttribute("alt", "photo");
+        imgEl.setAttribute("height", "50px");
+        const nameEl = document.createElement("h2");
+        imgEl.classList.add("h2");
+        nameEl.textContent = element.name;
+        const countEl = document.createElement("p");
+        countEl.classList.add("p1");
+        countEl.textContent = element.count;
+        const ageEl = document.createElement("p");
 
-      const divContent = document.querySelector(".content");
-      const asa = document.createElement("p");
-      asa.textContent = "asdas";
-      divContent.appendChild(asa);
+        ageEl.classList.add("p2");
+        ageEl.textContent = element.age;
+        contentEl.appendChild(imgEl);
+        contentEl.appendChild(nameEl);
+        contentEl.appendChild(countEl);
+        contentEl.appendChild(ageEl);
+      });
     </script>
   </body>
 </html>
