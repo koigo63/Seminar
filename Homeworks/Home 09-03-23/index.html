@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="content"></div>
+
+    <script src="data.js"></script>
+    <script>
+      const data = JSON.parse(dataInfo);
+      data.forEach((element) => {
+        const contentEl = document.querySelector(".content");
+        const productEl = document.createElement("section");
+        productEl.classList.add("products");
+        const imgEl = document.createElement("img");
+        imgEl.classList.add("img");
+        imgEl.src = element.photo;
+        imgEl.setAttribute("alt", element.name);
+        imgEl.setAttribute("height", "50px");
+        const nameEl = document.createElement("h2");
+        nameEl.classList.add("name");
+        nameEl.textContent = element.name;
+        const countEl = document.createElement("p");
+        countEl.classList.add("count");
+        countEl.textContent = `Count: ${element.count} `;
+        const ageEl = document.createElement("p");
+        ageEl.classList.add("age");
+        ageEl.textContent = `Age: ${element.age}`;
+        contentEl.appendChild(productEl);
+        productEl.appendChild(imgEl);
+        productEl.appendChild(nameEl);
+        productEl.appendChild(countEl);
+        productEl.appendChild(ageEl);
+      });
+    </script>
+  </body>
+</html>

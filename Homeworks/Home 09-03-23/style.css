@@ -1,0 +1,27 @@
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.products {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  border: solid 1px;
+  padding: 10px;
+}
+.name {
+  color: brown;
+}
+.count {
+  color: rgb(211, 136, 39);
+  font-weight: 500;
+}
+.age {
+  font-style: italic;
+  font-weight: 600;
+  color: rgb(114, 66, 6);
+}
