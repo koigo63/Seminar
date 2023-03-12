@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .check {
+        color: rgb(245, 237, 10);
+      }
+      .rating_sign-input {
+        /* visibility: hidden; */
+      }
+    </style>
+  </head>
+  <body>
+    <script
+      src="https://kit.fontawesome.com/a7ddde55e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <form action="#" class="form">
+      <div class="rating">
+        <div class="rating_sign_label">
+          <label for="1" class="rating_sign_input"
+            ><i class="fa-solid fa-star"></i>
+          </label>
+          <input
+            type="radio"
+            class="rating_sign-input"
+            name="rating"
+            id="1"
+            value="1"
+          />
+        </div>
+        <div class="rating_sign_label">
+          <label for="2" class="rating_sign_input"
+            ><i class="fa-solid fa-star"></i
+          ></label>
+          <input
+            type="radio"
+            class="rating_sign-input"
+            name="rating"
+            id="2"
+            value="2"
+          />
+        </div>
+        <div class="rating_sign_label">
+          <label for="3" class="rating_sign_input"
+            ><i class="fa-solid fa-star"></i
+          ></label>
+          <input
+            type="radio"
+            class="rating_sign-input"
+            name="rating"
+            id="3"
+            value="3"
+          />
+        </div>
+        <div class="rating_sign_label">
+          <label for="4" class="rating_sign_input"
+            ><i class="fa-solid fa-star"></i
+          ></label>
+          <input
+            type="radio"
+            class="rating_sign-input"
+            name="rating"
+            id="4"
+            value="4"
+          />
+        </div>
+        <div class="rating_sign_label">
+          <label for="1" class="rating_sign_input"
+            ><i class="fa-solid fa-star"></i
+          ></label>
+          <input
+            type="radio"
+            class="rating_sign-input"
+            name="rating"
+            id="5"
+            value="5"
+          />
+        </div>
+      </div>
+    </form>
+
+    <script>
+      const form = document.querySelector(".form");
+      const buttonS = document.querySelectorAll(".rating_sign-input");
+
+      buttonS.forEach((radio) => {
+        radio.addEventListener("change", function () {
+          const checkedNumber =
+            document.querySelector(".rating_sign-input:checked").value ||
+            undefined;
+          buttonS.forEach((item) => {
+            const curentLabel = item.previousElementSibling;
+            if (item.value <= checkedNumber) {
+              curentLabel.classList.add("check");
+              console.log(curentLabel);
+            } else {
+              curentLabel.classList.remove("check");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
