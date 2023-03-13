@@ -14,9 +14,9 @@
     </style>
   </head>
   <body>
-    <div>Текущее время: <span class="currentTime">0</span></div>
     <div class="player">
       <video src="img/выкуп.mp4"></video>
+      <div>Текущее время: <span class="currentTime">0</span></div>
       <input type="range" class="timing" value="0" step="0.001" />
     </div>
     <img src="img/play.png" alt="play" class="play" width="50px" />
@@ -25,31 +25,6 @@
       <span class="volume2">Громкость</span>
       <input type="range" class="volume" min="0" max="1" step="0.01" />
     </div>
-    <script>
-      const videoEl = document.querySelector("video");
-      const playbtnEl = document.querySelector(".play");
-      const pausebtnEl = document.querySelector(".pause");
-      const volumeEl = document.querySelector(".volume");
-      const timingEl = document.querySelector(".timing");
-      const currentTimeEl = document.querySelector(".currentTime");
-      const volume2El = document.querySelector(".volume2");
-
-      playbtnEl.addEventListener("click", function () {
-        videoEl.play();
-      });
-      pausebtnEl.addEventListener("click", function () {
-        videoEl.pause();
-      });
-      videoEl.addEventListener("timeupdate", function () {
-        currentTimeEl.innerText = videoEl.currentTime;
-        timingEl.value = (videoEl.currentTime / videoEl.duration) * 100;
-      });
-      volumeEl.addEventListener("input", function () {
-        videoEl.volume = volumeEl.value;
-      });
-      timingEl.addEventListener("input", () => {
-        videoEl.currentTime = (timingEl.value / 100) * videoEl.duration;
-      });
-    </script>
+    <script></script>
   </body>
 </html>

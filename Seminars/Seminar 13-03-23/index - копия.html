@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .player {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        color: rgb(70, 136, 243);
+      }
+      .span {
+        display: flex;
+        padding-left: 100px;
+        justify-content: flex-start;
+        gap: 20px;
+      }
+      .time {
+        display: flex;
+        align-items: center;
+      }
+      .fullTime {
+        width: 50px;
+      }
+      .span1 {
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        width: 160px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="player">
+      <video src="img/выкуп.mp4"></video>
+      <div class="span">
+        <div class="span1">
+          Текущее время:
+          <div class="currentTime">0</div>
+          сек
+        </div>
+        <div class="span1">
+          Громкость
+          <div class="volume2">1</div>
+          %
+        </div>
+      </div>
+      <div class="time">
+        <img src="img/play.png" alt="play" class="play" width="50px" />
+        <img src="img/pause.png" alt="pause" class="pause" width="50px" />
+        <input type="range" class="timing" value="0" step="0.001" />
+        <div class="fullTime">0</div>
+
+        <input type="range" class="volume" min="0" max="1" step="0.01" />
+      </div>
+    </div>
+
+    <script>
+      const videoEl = document.querySelector('video');
+      const playbtnEl = document.querySelector('.play');
+      const pausebtnEl = document.querySelector('.pause');
+      const volumeEl = document.querySelector('.volume');
+      const timingEl = document.querySelector('.timing');
+      const currentTimeEl = document.querySelector('.currentTime');
+      const volume2El = document.querySelector('.volume2');
+      const fullTimeEl = document.querySelector('.fullTime');
+      volume2El.innerText = Math.round(volumeEl.value * 100);
+      playbtnEl.addEventListener('click', function () {
+        videoEl.play();
+      });
+      pausebtnEl.addEventListener('click', function () {
+        videoEl.pause();
+      });
+      videoEl.addEventListener('timeupdate', function () {
+        currentTimeEl.innerText = Math.round(videoEl.currentTime);
+        fullTimeEl.innerText = Math.round(videoEl.duration);
+        timingEl.value = (videoEl.currentTime / videoEl.duration) * 100;
+        volume2El.innerText = Math.round(volumeEl.value * 100);
+      });
+      volumeEl.addEventListener('input', function () {
+        videoEl.volume = volumeEl.value;
+      });
+      timingEl.addEventListener('input', () => {
+        videoEl.currentTime = (timingEl.value / 100) * videoEl.duration;
+      });
+    </script>
+  </body>
+</html>
