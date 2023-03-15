@@ -325,6 +325,10 @@
           const cartdesc2P4 = document.createElement('p');
           cartdesc2P4.textContent = element.quantity;
           cartdesc2.appendChild(cartdesc2P4);
+          cartProduct.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
 
           if (cartProduct !== null) {
             prodEl.classList.remove('visible');
@@ -341,7 +345,6 @@
         });
       });
       const cartProduct2 = cartElem.querySelectorAll('article');
-      console.log(cartProduct2);
       cartProduct2.forEach((cartProduct2) => {
         cartProduct2.addEventListener('click', function () {
           cartProduct2.remove();
