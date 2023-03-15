@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="proba">
+      <button>КНОПКА</button>
+    </div>
+    <script>
+      const bodyEl = document.querySelector('.proba');
+      console.log(bodyEl.innerHTML);
+      bodyEl.innerHTML = localStorage.getItem('div');
+      const BtnEl = document.querySelector('button');
+      const divEl = document.createElement('div');
+      divEl.textContent = 'проба';
+      BtnEl.addEventListener('click', function () {
+        bodyEl.appendChild(divEl);
+        console.log(bodyEl.innerHTML);
+        localStorage.setItem('div', 'value');
+        localStorage['div'] = bodyEl.innerHTML; //   localStorage.setItem('test', 1);
+        alert(localStorage.getItem('div')); // 1
+      });
+
+      console.log(bodyEl.innerHTML);
+    </script>
+  </body>
+</html>

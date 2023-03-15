@@ -239,6 +239,8 @@
     <script src="data.js"></script>
 
     <script>
+      const cartElem = document.querySelector('.cart__items');
+      cartElem.innerHTML = localStorage.getItem('div');
       const data = JSON.parse(dataInfo);
       data.forEach((element) => {
         const topProducts = document.querySelector('.top__products');
@@ -338,6 +340,27 @@
           });
         });
       });
+      const cartProduct2 = cartElem.querySelectorAll('article');
+      console.log(cartProduct2);
+      cartProduct2.forEach((cartProduct2) => {
+        cartProduct2.addEventListener('click', function () {
+          cartProduct2.remove();
+          localStorage['div'] = cartElem.innerHTML;
+          if (document.querySelectorAll('.cart__product').length !== 0) {
+            cartElem.classList.remove('visible');
+          } else {
+            cartElem.classList.add('visible');
+          }
+        });
+      });
+      document.querySelector('body').addEventListener('mousemove', function () {
+        localStorage['div'] = cartElem.innerHTML;
+      });
+      if (document.querySelectorAll('.cart__product').length !== 0) {
+        cartElem.classList.remove('visible');
+      } else {
+        cartElem.classList.add('visible');
+      }
     </script>
   </body>
 </html>
