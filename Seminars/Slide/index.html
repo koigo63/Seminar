@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="item">
+        <a class="previous" onclick="previousSlide()">&#10094;</a>
+        <div class="item_col">
+          <h2>Заголовок слайда 1</h2>
+          <h3>Подзаголовок слайда 1</h3>
+          <button class="btn">Кнопка действия</button>
+        </div>
+        <img
+          src="https://w-dog.ru/wallpapers/6/2/326939737322301/leopard-vzglyad-xishhnik-fotoshop.jpg"
+          alt=""
+        />
+        <a class="next" onclick="nextSlide()">&#10095;</a>
+      </div>
+
+      <div class="item">
+        <a class="previous" onclick="previousSlide()">&#10094;</a>
+        <div class="item_col">
+          <h2>Заголовок слайда 2</h2>
+          <h3>Подзаголовок слайда 2</h3>
+          <button class="btn">Кнопка действия</button>
+        </div>
+        <img
+          src="http://www.fonstola.ru/download.php?file=201911/1024x600/fonstola.ru-356045.jpg"
+          alt=""
+        />
+        <a class="next" onclick="nextSlide()">&#10095;</a>
+      </div>
+
+      <div class="item">
+        <a class="previous" onclick="previousSlide()">&#10094;</a>
+        <div class="item_col">
+          <h2>Заголовок слайда 3</h2>
+          <h3>Подзаголовок слайда 3</h3>
+          <button class="btn">Кнопка действия</button>
+        </div>
+        <img
+          src="https://s1.1zoom.ru/b5050/929/328100-alexfas01_1920x1200.jpg"
+          alt=""
+        />
+        <a class="next" onclick="nextSlide()">&#10095;</a>
+      </div>
+
+      <div class="arrow_mobile">
+        <a class="previous_mobile" onclick="previousSlide()">&#10094;</a>
+        <a class="next_mobile" onclick="nextSlide()">&#10095;</a>
+      </div>
+    </div>
+    <script>
+      let slideIndex = 1;
+      /* Вызываем функцию, которая реализована ниже: */
+      showSlides(slideIndex);
+
+      /* Увеличиваем индекс на 1 — показываем следующий слайд: */
+      function nextSlide() {
+        showSlides((slideIndex += 1));
+      }
+
+      /* Уменьшаем индекс на 1 — показываем предыдущий слайд: */
+      function previousSlide() {
+        showSlides((slideIndex -= 1));
+      }
+
+      /* Устанавливаем текущий слайд: */
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      /* Функция перелистывания: */
+      function showSlides(n) {
+        /* Обращаемся к элементам с названием класса "item", то есть к картинкам: */
+        let slides = document.getElementsByClassName('item');
+
+        /* Проверяем количество слайдов: */
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+
+        /* Проходим по каждому слайду в цикле for: */
+        for (let slide of slides) {
+          slide.style.display = 'none';
+        }
+        /* Делаем элемент блочным: */
+        slides[slideIndex - 1].style.display = 'flex';
+      }
+    </script>
+  </body>
+</html>
