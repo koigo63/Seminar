@@ -1,3 +1,4 @@
+@import 'reset.css';
 * {
   margin: 0;
   padding: 0;
@@ -241,7 +242,7 @@ a {
   padding-bottom: 70px;
 }
 .pr_plan_p0 {
-  padding-left: 480px;
+  margin-left: 480px;
   width: 640px;
   font-weight: 400;
   font-size: 18px;
@@ -314,4 +315,66 @@ a {
 .pr_plan:hover .pr_plan_btn {
   background: #ef2a82;
   border: 1px solid #ef2a82;
+}
+
+.bottom {
+  margin-left: calc(50% - 480px);
+  margin-right: calc(50% - 480px);
+}
+.bottom_text {
+  width: 480px;
+}
+
+.bottom_text_h2 {
+  width: 430px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: #160637;
+  text-align: left;
+}
+.bottom__descr {
+  margin-bottom: 51px;
+  position: relative;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #8989a2;
+}
+
+.bottom__descr::before,
+.bottom__descr::after {
+  position: absolute;
+  content: '';
+  width: 144px;
+  height: 2px;
+  background: #d6d6d6;
+  top: 50%;
+  /* transform: translateX(0); */
+}
+
+.bottom__descr::before {
+  left: 0px;
+}
+
+.bottom__descr::after {
+  right: 0px;
+}
+.bottom_logo {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+}
+.bottom_logo1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 100px;
+}
+.bottom_logo2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 100px;
 }
