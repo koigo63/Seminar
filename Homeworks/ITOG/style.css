@@ -886,4 +886,8 @@ body {
   .pr1 p {
     border-bottom: 0;
   }
+  .rating {
+    justify-content: center;
+    padding-left: 30px;
+  }
 }
