@@ -1,8 +1,5 @@
 document.querySelector(".form__auth-btn").onclick = function () {
-    document.addEventListener('mo', function (e) {
-        // body
-    });
-    const userPassFirst = document.querySelector("#password1").value;
+      const userPassFirst = document.querySelector("#password1").value;
     const userPassSecond = document.querySelector("#password2").value;
   
     if (userPassFirst == "") {
