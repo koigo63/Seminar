@@ -5,7 +5,7 @@ public class App {
         String name = "Кинжал";
         x = x * 17;
         // System.out.println("x равен" + x);
-        double d = Math.random();
+        // double d = Math.random();
         // while (x > 12) {
         // x = x - 1;
         // System.out.println("x равен" + x);
